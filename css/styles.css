@@ -7,6 +7,10 @@
   --white-color: #ffffff;
   --black-color: #000000;
   --gray-color: #757575;
+  --color-change: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --fill-change: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --background-color-change: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --border-color-change: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container {
   width: 1200px;
@@ -121,7 +125,6 @@ img {
 }
 
 .nav-list {
-  display: flex;
   align-items: center;
 }
 
@@ -140,6 +143,7 @@ img {
   width: 16px;
   height: 12px;
   fill: #757575;
+  transition: var(--fill-change);
 }
 
 .mail-link-head:hover .icon-mail,
@@ -164,15 +168,14 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
+  transition: var(--color-change);
 }
 
 .active-element::after {
   content: "";
   display: block;
 
-  /* width: 48px; */
   height: 4px;
-  /* margin-bottom: 28px; */
   position: relative;
   top: 28px;
 
@@ -197,6 +200,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--gray-color);
+  transition: var(--color-change);
 }
 
 .tel-link-head {
@@ -210,8 +214,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: var(--gray-color);
+  transition: var(--color-change);
 }
 
 .icon-tel {
@@ -219,6 +223,7 @@ img {
   height: 16px;
   margin-right: 10px;
   fill: #757575;
+  transition: var(--fill-change);
 }
 
 .tel-link-head:hover .icon-tel,
@@ -373,7 +378,7 @@ img {
   padding-top: 27px;
   padding-right: 82px;
   padding-bottom: 27px;
-  padding-left: 83px;
+  padding-left: 82px;
 
   font-family: var(--main-font);
   font-weight: 700;
@@ -436,6 +441,11 @@ img {
   height: 44px;
   border-radius: 50%;
   fill: #afb1b8;
+  transition: var(--background-color-change);
+}
+
+.icon-social {
+  transition: var(--fill-change);
 }
 .icon-social-link:hover,
 .icon-social-link:focus {
@@ -484,6 +494,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--white-color);
+  transition: var(--border-color-change);
 }
 
 .link-icon-customers:hover .customers-svg,
@@ -506,6 +517,7 @@ img {
 }
 .customers-svg {
   fill: #afb1b8;
+  transition: var(--fill-change);
 }
 
 .customers-item:not(:last-child) {
@@ -578,6 +590,7 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: var(--background-color-change);
 }
 
 .social-join-link-item .link-social-join {
@@ -607,6 +620,42 @@ img {
 
 /* ==========END CONTACTS==========*/
 /* ========================END STYLES INDEX.HTML========================= */
+
+/* ===================MODAL-BACKDROP===================== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 580px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.close-modal-btn {
+}
+.btn-close {
+  width: 30px;
+  height: 30px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+/* ===================END-MODAL-BACKDROP===================== */
 
 /* ==============================PORTFOLIO============================== */
 /* =====================HEADER PORTFOLIO===================== */
