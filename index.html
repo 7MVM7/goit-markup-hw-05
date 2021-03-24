@@ -566,7 +566,19 @@
 
       </div>
 
+      <div>
+        <b>Подпишитесь на рассылку</b>
 
+      </div>
+      <form>
+        <div>
+          <label for="name" id="e-mail"></label>
+          <input type="text" id="e-mail" placeholder="E-mail">
+        </div>
+        <div>
+          <button type="submit">Подписаться</button>
+        </div>
+      </form>
 
     </div>
 
@@ -589,6 +601,52 @@
 
 
   </div>
+
+  <form class="form">
+    <p>Оставьте свои данные, мы вам перезвоним</p>
+    <div class="form-field">
+      <label for="name" class="form-label">Имя</label>
+      <input class="form-label" type="text" name="name" id="name" required minlength="2">
+
+    </div>
+
+    <div class="form-field">
+      <label for="tel">Телефон</label>
+      <input type="tel" name="tel" id="tel" required>
+
+
+    </div>
+
+    <div class=" form-field">
+      <label for="mail">Почта</label>
+      <input type="email" name="mail" id="mail" required>
+
+
+    </div>
+
+    <div class="form-field">
+      <label for="comment">Комментарий</label>
+
+      <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
+
+    </div>
+
+    <div class="form-field">
+      <ul class="check-options">
+        <li>
+          <input type="checkbox" required name="сonsent" id="сonsent">
+          <label for="сonsent">Соглашаюсь с рассылкой и принимаю Условия
+            договора</label>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+    <button type="submit">Отправить</button>
+
+  </form>
 
 
 </body>
